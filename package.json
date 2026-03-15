@@ -1,0 +1,33 @@
+{
+  "name": "projeto_job_finder",
+  "version": "1.0.0",
+  "description": "App projeto Professor - Encontrar vagas",
+  "keywords": [
+    "vagas"
+  ],
+  "homepage": "https://github.com/LucasGC1708/projeto_job_finder#readme",
+  "bugs": {
+    "url": "https://github.com/LucasGC1708/projeto_job_finder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasGC1708/projeto_job_finder.git"
+  },
+  "license": "ISC",
+  "author": "Lucas",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.6",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

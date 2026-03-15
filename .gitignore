@@ -1,0 +1,3 @@
+node_modules
+db/app_db/
+db/app.db-journal/
