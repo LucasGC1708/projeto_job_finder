@@ -12,7 +12,7 @@ const PORT = 3000;
 
 //PORTA
 app.listen(PORT,()=>{
-    console.log("portal 8080 funcionando");
+    console.log("Aplicação rodando na porta " + PORT);
 });
 
 //bodyParser
@@ -39,7 +39,7 @@ db.authenticate().then(()=> {
  app.get("/",function(req,res){
 
     let search = req.query.job;
-    let query = '%'+search+'%'; // PH -> busca resultando aproximadamente da palavra chave = PHP;
+    let query = '%'+search+'%';
 
     if(!search)
     {
@@ -48,7 +48,8 @@ db.authenticate().then(()=> {
         ]})
         .then(jobs =>{
             res.render("index",{
-                jobs
+                jobs,
+                extraCSS: '<link rel="stylesheet" href="/css/home.css">'
             });
         })
         .catch(err => console.log(err));
@@ -59,7 +60,8 @@ db.authenticate().then(()=> {
         ]})
         .then(jobs =>{
             res.render("index",{
-                jobs, search
+                jobs, search,
+                extraCSS: '<link rel="stylesheet" href="/css/home.css">'
             });
         })
         .catch(err=>console.log(err));

@@ -6,8 +6,10 @@ const Job = require("../models/Job");
 router.get("/view/:id",(req,res) => Job.findOne({
     where:{id: req.params.id}
     }).then(job =>{
+        console.log(job)
         res.render("view",{
-            job
+            job,
+            extraCSS: '<link rel="stylesheet" href="/css/job-view.css">'
         });
 
     }).catch(err=>console.log(err))
@@ -15,7 +17,9 @@ router.get("/view/:id",(req,res) => Job.findOne({
 
 //form da rota de envio
 router.get("/add",(req,res)=>{
-    res.render("add");
+    res.render("add", {
+        extraCSS: '<link rel="stylesheet" href="/css/add.css">'
+    });
 })
 
 //add

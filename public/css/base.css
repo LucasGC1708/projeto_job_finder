@@ -1,0 +1,50 @@
+/* Global Base Styles */
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem;
+    border: 1px solid #CCC;
+}
+
+.navbar .nav-item a {
+    color: #212529;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+.navbar .nav-item .btn {
+    color: #FFF;
+    background-color: #F03E3E;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+/* Button Hover States */
+.nav-link.btn.btn-primary:hover,
+#search-form button:hover,
+.list-group-item a:hover,
+#form-box button:hover {
+    background-color: #FFF;
+    color: #F03E3E;
+    border-color: #F03E3E;
+}
+
+/* Utility Classes */
+.bold {
+    font-weight: bold;
+}
+
+.main-color {
+    color: #F03E3E;
+}
